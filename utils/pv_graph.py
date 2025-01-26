@@ -29,7 +29,7 @@ class PVGraph:
                 self.connections[node1].remove(node2)
         if bidirectional and node2 in self.connections:
             if node1 in self.connections[node2]:
-                self.connections[node2].removed(node1)
+                self.connections[node2].remove(node1)
 
     def get_neighbors(self, node):
         return self.connections.get(node, [])
